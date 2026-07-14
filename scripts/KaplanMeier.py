@@ -33,9 +33,7 @@ for cms_type in sorted(data["CMS"].unique()):
     )
     kmf.plot_survival_function(ci_show=True)
 
-# ==========================================
-# LOG-RANK TEST
-# ==========================================
+# ===================== LOG-RANK TEST =====================
 
 results = multivariate_logrank_test(
     event_durations=data["OS.time"],
@@ -58,10 +56,6 @@ plt.savefig(
 )
 
 plt.close()
-
-# ==========================================
-# SAVE STATISTICS
-# ==========================================
 
 with open("cms_result/survival_statistics.txt", "w") as f:
     f.write(f"Log-rank p-value = {p:.6g}\n\n")
