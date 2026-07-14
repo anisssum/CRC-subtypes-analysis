@@ -1,0 +1,349 @@
+sampleID,disease,MSI_status,stage,age,sex,localization
+TCGA-3L-AA1B-01,colon adenocarcinoma,MSS,I,61.0,FEMALE,Cecum
+TCGA-4N-A93T-01,colon adenocarcinoma,MSS,III,67.0,MALE,Ascending Colon
+TCGA-5M-AAT4-01,colon adenocarcinoma,MSS,IV,74.0,MALE,Ascending Colon
+TCGA-5M-AAT6-01,colon adenocarcinoma,MSI-H,IV,40.0,FEMALE,Transverse Colon
+TCGA-5M-AATE-01,colon adenocarcinoma,MSS,II,76.0,MALE,Ascending Colon
+TCGA-A6-2682-01,colon adenocarcinoma,MSS,IV,70.0,MALE,[Discrepancy]
+TCGA-A6-2685-01,colon adenocarcinoma,MSS,II,48.0,FEMALE,Sigmoid Colon
+TCGA-A6-2686-01,colon adenocarcinoma,MSI-H,II,81.0,FEMALE,Cecum
+TCGA-A6-4105-01,colon adenocarcinoma,MSS,II,79.0,MALE,Ascending Colon
+TCGA-A6-5657-01,colon adenocarcinoma,MSS,III,65.0,MALE,[Discrepancy]
+TCGA-A6-5660-01,colon adenocarcinoma,MSS,III,73.0,MALE,Cecum
+TCGA-A6-5661-01,colon adenocarcinoma,MSI-H,II,80.0,FEMALE,Ascending Colon
+TCGA-A6-5662-01,colon adenocarcinoma,MSS,IV,46.0,MALE,Splenic Flexure
+TCGA-A6-5664-01,colon adenocarcinoma,MSS,III,80.0,MALE,Cecum
+TCGA-A6-5665-01,colon adenocarcinoma,MSI-H,II,84.0,FEMALE,Ascending Colon
+TCGA-A6-5666-01,colon adenocarcinoma,MSI-L,II,78.0,MALE,Sigmoid Colon
+TCGA-A6-5667-01,colon adenocarcinoma,MSS,III,40.0,FEMALE,Sigmoid Colon
+TCGA-A6-6137-01,colon adenocarcinoma,MSS,III,55.0,MALE,Hepatic Flexure
+TCGA-A6-6138-01,colon adenocarcinoma,MSS,I,61.0,MALE,Cecum
+TCGA-A6-6140-01,colon adenocarcinoma,MSS,II,62.0,MALE,Descending Colon
+TCGA-A6-6141-01,colon adenocarcinoma,MSS,II,31.0,MALE,Cecum
+TCGA-A6-6142-01,colon adenocarcinoma,MSS,IV,56.0,FEMALE,Sigmoid Colon
+TCGA-A6-6648-01,colon adenocarcinoma,MSS,IV,56.0,MALE,[Discrepancy]
+TCGA-A6-6649-01,colon adenocarcinoma,MSS,III,66.0,MALE,Hepatic Flexure
+TCGA-A6-6651-01,colon adenocarcinoma,MSS,III,55.0,FEMALE,Transverse Colon
+TCGA-A6-6652-01,colon adenocarcinoma,MSS,IV,59.0,MALE,Sigmoid Colon
+TCGA-A6-6653-01,colon adenocarcinoma,MSI-H,I,82.0,MALE,Ascending Colon
+TCGA-A6-6654-01,colon adenocarcinoma,MSS,III,65.0,FEMALE,Descending Colon
+TCGA-A6-6782-01,colon adenocarcinoma,MSS,II,82.0,MALE,Transverse Colon
+TCGA-A6-A565-01,colon adenocarcinoma,MSI-L,III,34.0,FEMALE,Transverse Colon
+TCGA-A6-A566-01,colon adenocarcinoma,MSI-L,III,55.0,FEMALE,Descending Colon
+TCGA-A6-A567-01,colon adenocarcinoma,MSS,IV,56.0,MALE,Sigmoid Colon
+TCGA-A6-A56B-01,colon adenocarcinoma,MSS,III,57.0,MALE,Sigmoid Colon
+TCGA-A6-A5ZU-01,colon adenocarcinoma,MSS,III,59.0,MALE,Transverse Colon
+TCGA-AA-3489-01,colon adenocarcinoma,MSS,II,75.0,MALE,Sigmoid Colon
+TCGA-AA-3492-01,colon adenocarcinoma,MSI-H,II,90.0,FEMALE,Ascending Colon
+TCGA-AA-3495-01,colon adenocarcinoma,MSS,I,79.0,MALE,Hepatic Flexure
+TCGA-AA-3496-01,colon adenocarcinoma,MSI-L,II,83.0,FEMALE,Ascending Colon
+TCGA-AA-3502-01,colon adenocarcinoma,MSI-L,I,73.0,MALE,Transverse Colon
+TCGA-AA-3506-01,colon adenocarcinoma,MSS,I,77.0,MALE,Hepatic Flexure
+TCGA-AA-3509-01,colon adenocarcinoma,MSS,II,54.0,FEMALE,Sigmoid Colon
+TCGA-AA-3511-01,colon adenocarcinoma,MSS,II,64.0,MALE,Sigmoid Colon
+TCGA-AA-3526-01,colon adenocarcinoma,MSI-L,I,57.0,MALE,Sigmoid Colon
+TCGA-AA-3655-01,colon adenocarcinoma,MSS,II,68.0,MALE,Sigmoid Colon
+TCGA-AA-3660-01,colon adenocarcinoma,MSS,II,51.0,FEMALE,Sigmoid Colon
+TCGA-AA-3662-01,colon adenocarcinoma,MSS,IV,80.0,FEMALE,Sigmoid Colon
+TCGA-AA-3663-01,colon adenocarcinoma,MSI-H,II,42.0,MALE,Cecum
+TCGA-AA-3675-01,colon adenocarcinoma,MSS,II,84.0,MALE,Hepatic Flexure
+TCGA-AA-3685-01,colon adenocarcinoma,MSS,II,69.0,MALE,Sigmoid Colon
+TCGA-AA-3697-01,colon adenocarcinoma,MSI-L,II,77.0,MALE,Sigmoid Colon
+TCGA-AA-3712-01,colon adenocarcinoma,MSS,III,65.0,MALE,Descending Colon
+TCGA-AA-3713-01,colon adenocarcinoma,MSI-H,IV,68.0,MALE,Ascending Colon
+TCGA-AA-A01P-01,colon adenocarcinoma,MSI-H,III,80.0,FEMALE,Ascending Colon
+TCGA-AA-A01X-01,colon adenocarcinoma,MSS,III,80.0,FEMALE,Sigmoid Colon
+TCGA-AA-A01Z-01,colon adenocarcinoma,MSS,II,68.0,MALE,Ascending Colon
+TCGA-AA-A02K-01,colon adenocarcinoma,MSS,IV,50.0,MALE,Ascending Colon
+TCGA-AA-A02Y-01,colon adenocarcinoma,MSS,I,73.0,MALE,Cecum
+TCGA-AD-5900-01,colon adenocarcinoma,MSI-H,I,67.0,MALE,Ascending Colon
+TCGA-AD-6548-01,colon adenocarcinoma,MSI-L,I,81.0,FEMALE,Splenic Flexure
+TCGA-AD-6888-01,colon adenocarcinoma,MSS,III,73.0,MALE,Hepatic Flexure
+TCGA-AD-6889-01,colon adenocarcinoma,MSI-H,II,76.0,MALE,Ascending Colon
+TCGA-AD-6895-01,colon adenocarcinoma,MSI-H,III,84.0,MALE,Cecum
+TCGA-AD-6899-01,colon adenocarcinoma,MSS,III,84.0,MALE,Cecum
+TCGA-AD-6965-01,colon adenocarcinoma,MSS,III,62.0,MALE,Cecum
+TCGA-AD-A5EJ-01,colon adenocarcinoma,MSI-H,II,74.0,FEMALE,Cecum
+TCGA-AD-A5EK-01,colon adenocarcinoma,MSS,I,51.0,MALE,Ascending Colon
+TCGA-AF-2687-01,rectum adenocarcinoma,MSS,III,57.0,MALE,Rectum
+TCGA-AF-2690-01,rectum adenocarcinoma,MSS,III,76.0,FEMALE,Rectum
+TCGA-AF-2693-01,rectum adenocarcinoma,MSS,I,75.0,MALE,Sigmoid Colon
+TCGA-AF-3911-01,rectum adenocarcinoma,MSI-L,III,48.0,MALE,Rectum
+TCGA-AF-4110-01,rectum adenocarcinoma,MSS,IV,77.0,MALE,Rectosigmoid Junction
+TCGA-AF-6136-01,rectum adenocarcinoma,MSS,III,72.0,FEMALE,Rectosigmoid Junction
+TCGA-AF-6655-01,rectum adenocarcinoma,MSS,III,66.0,MALE,Rectum
+TCGA-AF-6672-01,rectum adenocarcinoma,MSS,IV,43.0,MALE,Rectosigmoid Junction
+TCGA-AF-A56K-01,rectum adenocarcinoma,MSS,II,56.0,MALE,Sigmoid Colon
+TCGA-AF-A56L-01,rectum adenocarcinoma,MSS,III,48.0,FEMALE,Sigmoid Colon
+TCGA-AF-A56N-01,rectum adenocarcinoma,MSS,II,47.0,FEMALE,Rectum
+TCGA-AG-3591-01,rectum adenocarcinoma,MSS,II,66.0,FEMALE,Rectum
+TCGA-AG-3592-01,rectum adenocarcinoma,MSI-L,II,68.0,MALE,Rectum
+TCGA-AG-3725-01,rectum adenocarcinoma,MSS,III,90.0,FEMALE,Rectum
+TCGA-AG-3731-01,rectum adenocarcinoma,MSI-L,IV,65.0,MALE,Rectum
+TCGA-AG-3732-01,rectum adenocarcinoma,MSS,I,78.0,FEMALE,Rectum
+TCGA-AG-3742-01,rectum adenocarcinoma,MSS,I,85.0,FEMALE,Rectum
+TCGA-AG-3902-01,rectum adenocarcinoma,MSS,II,61.0,MALE,Rectum
+TCGA-AG-4021-01,rectum adenocarcinoma,MSS,IV,84.0,FEMALE,Rectum
+TCGA-AG-4022-01,rectum adenocarcinoma,MSS,II,59.0,FEMALE,Rectum
+TCGA-AH-6643-01,rectum adenocarcinoma,MSS,III,50.0,MALE,Rectosigmoid Junction
+TCGA-AH-6897-01,rectum adenocarcinoma,MSI-L,I,48.0,MALE,Rectosigmoid Junction
+TCGA-AH-6903-01,rectum adenocarcinoma,MSS,III,46.0,MALE,Rectosigmoid Junction
+TCGA-AM-5820-01,colon adenocarcinoma,MSS,IV,59.0,FEMALE,Sigmoid Colon
+TCGA-AM-5821-01,colon adenocarcinoma,MSI-H,II,68.0,FEMALE,Sigmoid Colon
+TCGA-AU-3779-01,colon adenocarcinoma,MSS,II,80.0,FEMALE,Rectosigmoid Junction
+TCGA-AU-6004-01,colon adenocarcinoma,MSI-H,I,69.0,FEMALE,Cecum
+TCGA-AY-5543-01,colon adenocarcinoma,MSS,IV,65.0,FEMALE,Ascending Colon
+TCGA-AY-6196-01,colon adenocarcinoma,MSI-L,III,47.0,MALE,Cecum
+TCGA-AY-6197-01,colon adenocarcinoma,MSI-H,II,60.0,MALE,Cecum
+TCGA-AY-6386-01,colon adenocarcinoma,MSS,III,66.0,FEMALE,Cecum
+TCGA-AY-A54L-01,colon adenocarcinoma,MSI-L,I,74.0,FEMALE,Transverse Colon
+TCGA-AY-A69D-01,colon adenocarcinoma,MSI-L,II,55.0,FEMALE,Transverse Colon
+TCGA-AY-A71X-01,colon adenocarcinoma,MSS,I,54.0,FEMALE,Cecum
+TCGA-AY-A8YK-01,colon adenocarcinoma,MSS,IV,44.0,MALE,Sigmoid Colon
+TCGA-AZ-4313-01,colon adenocarcinoma,MSI-H,I,51.0,FEMALE,Descending Colon
+TCGA-AZ-4315-01,colon adenocarcinoma,MSS,II,61.0,MALE,Cecum
+TCGA-AZ-4323-01,colon adenocarcinoma,MSI-L,IV,37.0,MALE,Cecum
+TCGA-AZ-4614-01,colon adenocarcinoma,MSI-L,IV,71.0,FEMALE,
+TCGA-AZ-4615-01,colon adenocarcinoma,MSI-H,III,84.0,MALE,
+TCGA-AZ-4616-01,colon adenocarcinoma,MSI-L,IV,82.0,FEMALE,Cecum
+TCGA-AZ-4682-01,colon adenocarcinoma,MSS,IV,61.0,MALE,Sigmoid Colon
+TCGA-AZ-4684-01,colon adenocarcinoma,MSI-L,IV,49.0,MALE,
+TCGA-AZ-5403-01,colon adenocarcinoma,MSS,II,43.0,MALE,Sigmoid Colon
+TCGA-AZ-5407-01,colon adenocarcinoma,MSS,I,51.0,FEMALE,Cecum
+TCGA-AZ-6598-01,colon adenocarcinoma,MSI-H,II,77.0,FEMALE,[Discrepancy]
+TCGA-AZ-6599-01,colon adenocarcinoma,MSS,I,72.0,MALE,Cecum
+TCGA-AZ-6600-01,colon adenocarcinoma,MSS,IV,64.0,MALE,Hepatic Flexure
+TCGA-AZ-6601-01,colon adenocarcinoma,MSI-H,II,68.0,MALE,Sigmoid Colon
+TCGA-AZ-6605-01,colon adenocarcinoma,MSS,III,77.0,MALE,Ascending Colon
+TCGA-AZ-6606-01,colon adenocarcinoma,MSS,IV,81.0,MALE,Cecum
+TCGA-AZ-6607-01,colon adenocarcinoma,MSS,IV,69.0,MALE,Sigmoid Colon
+TCGA-AZ-6608-01,colon adenocarcinoma,MSI-L,III,55.0,FEMALE,Sigmoid Colon
+TCGA-BM-6198-01,rectum adenocarcinoma,MSS,III,73.0,MALE,Rectum
+TCGA-CA-5254-01,colon adenocarcinoma,MSI-L,II,42.0,FEMALE,Transverse Colon
+TCGA-CA-5255-01,colon adenocarcinoma,MSS,II,45.0,MALE,Ascending Colon
+TCGA-CA-5256-01,colon adenocarcinoma,MSS,II,54.0,FEMALE,Hepatic Flexure
+TCGA-CA-5796-01,colon adenocarcinoma,MSS,II,52.0,FEMALE,Ascending Colon
+TCGA-CA-5797-01,colon adenocarcinoma,MSS,II,56.0,MALE,Sigmoid Colon
+TCGA-CA-6715-01,colon adenocarcinoma,MSS,III,63.0,MALE,Sigmoid Colon
+TCGA-CA-6716-01,colon adenocarcinoma,MSS,II,65.0,MALE,Ascending Colon
+TCGA-CA-6717-01,colon adenocarcinoma,MSS,II,57.0,MALE,Ascending Colon
+TCGA-CA-6718-01,colon adenocarcinoma,MSS,II,46.0,MALE,Ascending Colon
+TCGA-CA-6719-01,colon adenocarcinoma,MSI-L,II,77.0,MALE,Descending Colon
+TCGA-CI-6619-01,rectum adenocarcinoma,MSS,IV,41.0,MALE,Rectum
+TCGA-CI-6620-01,rectum adenocarcinoma,MSS,IV,41.0,FEMALE,Rectum
+TCGA-CI-6621-01,rectum adenocarcinoma,MSS,III,63.0,MALE,Rectum
+TCGA-CI-6622-01,rectum adenocarcinoma,MSS,II,74.0,MALE,Rectum
+TCGA-CI-6623-01,rectum adenocarcinoma,MSS,I,44.0,MALE,Rectum
+TCGA-CI-6624-01,rectum adenocarcinoma,MSS,I,53.0,FEMALE,Rectosigmoid Junction
+TCGA-CK-4947-01,colon adenocarcinoma,MSS,III,46.0,FEMALE,Sigmoid Colon
+TCGA-CK-4948-01,colon adenocarcinoma,MSI-L,III,45.0,FEMALE,Sigmoid Colon
+TCGA-CK-4950-01,colon adenocarcinoma,MSS,III,68.0,FEMALE,Cecum
+TCGA-CK-4951-01,colon adenocarcinoma,MSI-H,II,79.0,FEMALE,Ascending Colon
+TCGA-CK-4952-01,colon adenocarcinoma,MSS,III,48.0,FEMALE,Ascending Colon
+TCGA-CK-5912-01,colon adenocarcinoma,MSS,I,81.0,MALE,Cecum
+TCGA-CK-5913-01,colon adenocarcinoma,MSI-H,II,58.0,FEMALE,Cecum
+TCGA-CK-5914-01,colon adenocarcinoma,MSS,III,81.0,MALE,Sigmoid Colon
+TCGA-CK-5915-01,colon adenocarcinoma,MSS,I,63.0,MALE,Sigmoid Colon
+TCGA-CK-5916-01,colon adenocarcinoma,MSI-H,I,71.0,FEMALE,Cecum
+TCGA-CK-6746-01,colon adenocarcinoma,MSI-H,II,84.0,FEMALE,Cecum
+TCGA-CK-6747-01,colon adenocarcinoma,MSI-H,II,87.0,FEMALE,Cecum
+TCGA-CK-6748-01,colon adenocarcinoma,MSS,IV,45.0,FEMALE,Sigmoid Colon
+TCGA-CK-6751-01,colon adenocarcinoma,MSS,I,88.0,FEMALE,Ascending Colon
+TCGA-CL-5917-01,rectum adenocarcinoma,MSS,III,71.0,FEMALE,Rectosigmoid Junction
+TCGA-CL-5918-01,rectum adenocarcinoma,MSS,II,90.0,FEMALE,Rectosigmoid Junction
+TCGA-CM-4743-01,colon adenocarcinoma,MSI-H,II,69.0,MALE,Hepatic Flexure
+TCGA-CM-4744-01,colon adenocarcinoma,MSS,I,69.0,MALE,Cecum
+TCGA-CM-4747-01,colon adenocarcinoma,MSI-L,IV,47.0,MALE,Cecum
+TCGA-CM-4751-01,colon adenocarcinoma,MSS,III,62.0,MALE,Cecum
+TCGA-CM-5344-01,colon adenocarcinoma,MSS,III,39.0,FEMALE,Sigmoid Colon
+TCGA-CM-5348-01,colon adenocarcinoma,MSS,III,72.0,MALE,Cecum
+TCGA-CM-5349-01,colon adenocarcinoma,MSS,II,68.0,FEMALE,Cecum
+TCGA-CM-5860-01,colon adenocarcinoma,MSS,II,44.0,MALE,Ascending Colon
+TCGA-CM-5861-01,colon adenocarcinoma,MSI-H,II,63.0,FEMALE,Cecum
+TCGA-CM-5862-01,colon adenocarcinoma,MSS,IV,80.0,MALE,Ascending Colon
+TCGA-CM-5863-01,colon adenocarcinoma,MSS,III,60.0,FEMALE,Ascending Colon
+TCGA-CM-5864-01,colon adenocarcinoma,MSS,I,60.0,MALE,Cecum
+TCGA-CM-5868-01,colon adenocarcinoma,MSS,IV,59.0,FEMALE,Sigmoid Colon
+TCGA-CM-6161-01,colon adenocarcinoma,MSI-L,I,36.0,FEMALE,Sigmoid Colon
+TCGA-CM-6162-01,colon adenocarcinoma,MSI-H,III,48.0,FEMALE,Ascending Colon
+TCGA-CM-6163-01,colon adenocarcinoma,MSS,I,74.0,MALE,Sigmoid Colon
+TCGA-CM-6164-01,colon adenocarcinoma,MSS,II,46.0,FEMALE,Sigmoid Colon
+TCGA-CM-6165-01,colon adenocarcinoma,MSS,II,74.0,MALE,Sigmoid Colon
+TCGA-CM-6166-01,colon adenocarcinoma,MSS,I,48.0,FEMALE,Ascending Colon
+TCGA-CM-6167-01,colon adenocarcinoma,MSS,III,57.0,FEMALE,Cecum
+TCGA-CM-6168-01,colon adenocarcinoma,MSI-L,II,84.0,FEMALE,Ascending Colon
+TCGA-CM-6169-01,colon adenocarcinoma,MSS,II,67.0,MALE,Cecum
+TCGA-CM-6170-01,colon adenocarcinoma,MSS,I,73.0,FEMALE,Descending Colon
+TCGA-CM-6171-01,colon adenocarcinoma,MSI-H,I,77.0,FEMALE,Ascending Colon
+TCGA-CM-6172-01,colon adenocarcinoma,MSS,III,70.0,FEMALE,Sigmoid Colon
+TCGA-CM-6674-01,colon adenocarcinoma,MSI-H,II,39.0,MALE,Hepatic Flexure
+TCGA-CM-6675-01,colon adenocarcinoma,MSS,IV,35.0,MALE,Cecum
+TCGA-CM-6676-01,colon adenocarcinoma,MSI-L,I,82.0,MALE,Sigmoid Colon
+TCGA-CM-6677-01,colon adenocarcinoma,MSS,II,75.0,FEMALE,Hepatic Flexure
+TCGA-CM-6678-01,colon adenocarcinoma,MSS,IV,63.0,FEMALE,Sigmoid Colon
+TCGA-CM-6679-01,colon adenocarcinoma,MSS,II,58.0,MALE,Sigmoid Colon
+TCGA-CM-6680-01,colon adenocarcinoma,MSS,III,78.0,FEMALE,Cecum
+TCGA-D5-5537-01,colon adenocarcinoma,MSS,II,83.0,MALE,Ascending Colon
+TCGA-D5-5538-01,colon adenocarcinoma,MSS,III,60.0,FEMALE,Cecum
+TCGA-D5-5539-01,colon adenocarcinoma,MSS,III,60.0,MALE,Ascending Colon
+TCGA-D5-5540-01,colon adenocarcinoma,MSI-L,II,73.0,MALE,Cecum
+TCGA-D5-5541-01,colon adenocarcinoma,MSS,III,63.0,MALE,Sigmoid Colon
+TCGA-D5-6529-01,colon adenocarcinoma,MSI-L,II,69.0,MALE,[Discrepancy]
+TCGA-D5-6530-01,colon adenocarcinoma,MSI-H,I,53.0,MALE,[Discrepancy]
+TCGA-D5-6531-01,colon adenocarcinoma,MSS,II,75.0,MALE,Hepatic Flexure
+TCGA-D5-6532-01,colon adenocarcinoma,MSI-L,II,61.0,MALE,Sigmoid Colon
+TCGA-D5-6534-01,colon adenocarcinoma,MSS,II,62.0,FEMALE,Ascending Colon
+TCGA-D5-6535-01,colon adenocarcinoma,MSS,III,80.0,FEMALE,Ascending Colon
+TCGA-D5-6536-01,colon adenocarcinoma,MSS,II,73.0,MALE,Sigmoid Colon
+TCGA-D5-6537-01,colon adenocarcinoma,MSS,III,64.0,MALE,Transverse Colon
+TCGA-D5-6538-01,colon adenocarcinoma,MSI-L,III,79.0,FEMALE,Hepatic Flexure
+TCGA-D5-6540-01,colon adenocarcinoma,MSI-H,I,66.0,MALE,Cecum
+TCGA-D5-6541-01,colon adenocarcinoma,MSS,II,49.0,MALE,Splenic Flexure
+TCGA-D5-6898-01,colon adenocarcinoma,MSS,I,51.0,FEMALE,Sigmoid Colon
+TCGA-D5-6920-01,colon adenocarcinoma,MSS,II,77.0,FEMALE,Sigmoid Colon
+TCGA-D5-6922-01,colon adenocarcinoma,MSS,III,76.0,MALE,Sigmoid Colon
+TCGA-D5-6923-01,colon adenocarcinoma,MSS,I,57.0,MALE,Sigmoid Colon
+TCGA-D5-6924-01,colon adenocarcinoma,MSS,II,68.0,MALE,Sigmoid Colon
+TCGA-D5-6926-01,colon adenocarcinoma,MSS,III,65.0,MALE,Sigmoid Colon
+TCGA-D5-6927-01,colon adenocarcinoma,MSI-H,II,34.0,MALE,Transverse Colon
+TCGA-D5-6928-01,colon adenocarcinoma,MSI-H,II,80.0,MALE,Ascending Colon
+TCGA-D5-6929-01,colon adenocarcinoma,MSI-L,IV,49.0,FEMALE,Sigmoid Colon
+TCGA-D5-6930-01,colon adenocarcinoma,MSI-H,II,67.0,MALE,Ascending Colon
+TCGA-D5-6931-01,colon adenocarcinoma,MSS,III,77.0,MALE,Transverse Colon
+TCGA-D5-6932-01,colon adenocarcinoma,MSS,II,69.0,MALE,Transverse Colon
+TCGA-D5-7000-01,colon adenocarcinoma,MSS,I,79.0,FEMALE,Cecum
+TCGA-DC-4745-01,rectum adenocarcinoma,MSS,III,49.0,FEMALE,Rectosigmoid Junction
+TCGA-DC-4749-01,rectum adenocarcinoma,MSS,I,57.0,MALE,Rectosigmoid Junction
+TCGA-DC-5337-01,rectum adenocarcinoma,MSS,I,69.0,MALE,Rectosigmoid Junction
+TCGA-DC-5869-01,rectum adenocarcinoma,MSS,III,62.0,FEMALE,Rectum
+TCGA-DC-6154-01,rectum adenocarcinoma,MSI-H,IV,57.0,FEMALE,Rectosigmoid Junction
+TCGA-DC-6155-01,rectum adenocarcinoma,MSS,III,31.0,FEMALE,Rectosigmoid Junction
+TCGA-DC-6156-01,rectum adenocarcinoma,MSS,IV,62.0,MALE,Rectosigmoid Junction
+TCGA-DC-6157-01,rectum adenocarcinoma,MSS,I,48.0,MALE,Rectosigmoid Junction
+TCGA-DC-6158-01,rectum adenocarcinoma,MSS,I,70.0,MALE,Rectum
+TCGA-DC-6160-01,rectum adenocarcinoma,MSS,I,68.0,MALE,Rectosigmoid Junction
+TCGA-DC-6681-01,rectum adenocarcinoma,MSS,IV,70.0,FEMALE,Rectosigmoid Junction
+TCGA-DC-6682-01,rectum adenocarcinoma,MSS,II,57.0,MALE,Rectosigmoid Junction
+TCGA-DC-6683-01,rectum adenocarcinoma,MSS,III,43.0,MALE,Rectosigmoid Junction
+TCGA-DM-A0X9-01,colon adenocarcinoma,MSS,II,71.0,FEMALE,[Discrepancy]
+TCGA-DM-A0XD-01,colon adenocarcinoma,MSI-L,II,65.0,MALE,[Discrepancy]
+TCGA-DM-A0XF-01,colon adenocarcinoma,MSI-L,III,68.0,FEMALE,[Discrepancy]
+TCGA-DM-A1D0-01,colon adenocarcinoma,MSS,II,79.0,FEMALE,Sigmoid Colon
+TCGA-DM-A1D4-01,colon adenocarcinoma,MSI-L,II,80.0,MALE,Cecum
+TCGA-DM-A1D6-01,colon adenocarcinoma,MSS,II,88.0,MALE,Splenic Flexure
+TCGA-DM-A1D7-01,colon adenocarcinoma,MSS,II,82.0,MALE,Sigmoid Colon
+TCGA-DM-A1D9-01,colon adenocarcinoma,MSS,II,67.0,FEMALE,Cecum
+TCGA-DM-A1DA-01,colon adenocarcinoma,MSI-L,III,71.0,FEMALE,Cecum
+TCGA-DM-A1DB-01,colon adenocarcinoma,MSS,II,68.0,MALE,Sigmoid Colon
+TCGA-DM-A1HA-01,colon adenocarcinoma,MSS,III,82.0,MALE,Ascending Colon
+TCGA-DM-A1HB-01,colon adenocarcinoma,MSI-H,III,75.0,MALE,Transverse Colon
+TCGA-DM-A280-01,colon adenocarcinoma,MSS,II,70.0,FEMALE,Ascending Colon
+TCGA-DM-A282-01,colon adenocarcinoma,MSS,II,60.0,FEMALE,Hepatic Flexure
+TCGA-DM-A285-01,colon adenocarcinoma,MSS,IV,71.0,FEMALE,Ascending Colon
+TCGA-DM-A288-01,colon adenocarcinoma,MSS,III,68.0,MALE,Cecum
+TCGA-DM-A28A-01,colon adenocarcinoma,MSS,III,78.0,MALE,Cecum
+TCGA-DM-A28C-01,colon adenocarcinoma,MSS,II,74.0,MALE,Sigmoid Colon
+TCGA-DM-A28E-01,colon adenocarcinoma,MSS,II,72.0,FEMALE,Sigmoid Colon
+TCGA-DM-A28F-01,colon adenocarcinoma,MSS,III,73.0,MALE,Sigmoid Colon
+TCGA-DM-A28G-01,colon adenocarcinoma,MSS,II,75.0,MALE,Ascending Colon
+TCGA-DM-A28H-01,colon adenocarcinoma,MSI-L,III,50.0,MALE,Cecum
+TCGA-DM-A28K-01,colon adenocarcinoma,MSS,II,75.0,MALE,Hepatic Flexure
+TCGA-DM-A28M-01,colon adenocarcinoma,MSS,II,63.0,MALE,Descending Colon
+TCGA-DT-5265-01,rectum adenocarcinoma,MSS,II,51.0,MALE,Rectum
+TCGA-DY-A0XA-01,rectum adenocarcinoma,MSS,II,57.0,FEMALE,Rectosigmoid Junction
+TCGA-DY-A1DC-01,rectum adenocarcinoma,MSS,II,72.0,FEMALE,Rectosigmoid Junction
+TCGA-DY-A1DD-01,rectum adenocarcinoma,MSI-L,III,77.0,FEMALE,Rectosigmoid Junction
+TCGA-DY-A1DE-01,rectum adenocarcinoma,MSS,II,56.0,FEMALE,Rectum
+TCGA-DY-A1DF-01,rectum adenocarcinoma,MSI-L,III,73.0,FEMALE,Rectosigmoid Junction
+TCGA-DY-A1DG-01,rectum adenocarcinoma,MSS,IV,75.0,MALE,Rectum
+TCGA-DY-A1H8-01,rectum adenocarcinoma,MSS,III,77.0,FEMALE,Rectum
+TCGA-EF-5830-01,rectum adenocarcinoma,MSS,II,54.0,MALE,Rectum
+TCGA-EF-5831-01,rectum adenocarcinoma,MSS,II,72.0,MALE,Rectum
+TCGA-EI-6506-01,rectum adenocarcinoma,MSS,II,78.0,FEMALE,Rectosigmoid Junction
+TCGA-EI-6507-01,rectum adenocarcinoma,MSI-H,II,60.0,MALE,Rectum
+TCGA-EI-6508-01,rectum adenocarcinoma,MSS,III,48.0,FEMALE,Rectosigmoid Junction
+TCGA-EI-6509-01,rectum adenocarcinoma,MSS,III,53.0,MALE,Rectosigmoid Junction
+TCGA-EI-6511-01,rectum adenocarcinoma,MSS,III,52.0,MALE,Rectum
+TCGA-EI-6512-01,rectum adenocarcinoma,MSS,III,64.0,FEMALE,Rectosigmoid Junction
+TCGA-EI-6513-01,rectum adenocarcinoma,MSS,III,59.0,MALE,Rectosigmoid Junction
+TCGA-EI-6514-01,rectum adenocarcinoma,MSS,II,59.0,FEMALE,Sigmoid Colon
+TCGA-EI-6881-01,rectum adenocarcinoma,MSS,III,60.0,MALE,Rectosigmoid Junction
+TCGA-EI-6882-01,rectum adenocarcinoma,MSI-H,II,59.0,MALE,Rectosigmoid Junction
+TCGA-EI-6883-01,rectum adenocarcinoma,MSS,II,63.0,MALE,Rectosigmoid Junction
+TCGA-EI-6884-01,rectum adenocarcinoma,MSS,III,71.0,MALE,Rectosigmoid Junction
+TCGA-EI-6885-01,rectum adenocarcinoma,MSS,IV,57.0,FEMALE,Rectosigmoid Junction
+TCGA-EI-6917-01,rectum adenocarcinoma,MSS,III,33.0,MALE,Rectum
+TCGA-EI-7002-01,rectum adenocarcinoma,MSI-L,IV,58.0,MALE,Rectum
+TCGA-F4-6459-01,colon adenocarcinoma,MSS,III,61.0,FEMALE,Sigmoid Colon
+TCGA-F4-6460-01,colon adenocarcinoma,MSS,III,51.0,FEMALE,Sigmoid Colon
+TCGA-F4-6461-01,colon adenocarcinoma,MSS,III,41.0,FEMALE,Hepatic Flexure
+TCGA-F4-6463-01,colon adenocarcinoma,MSS,II,51.0,MALE,Transverse Colon
+TCGA-F4-6569-01,colon adenocarcinoma,MSS,I,60.0,MALE,Transverse Colon
+TCGA-F4-6570-01,colon adenocarcinoma,MSI-H,II,78.0,FEMALE,Transverse Colon
+TCGA-F4-6703-01,colon adenocarcinoma,MSI-H,II,64.0,MALE,Ascending Colon
+TCGA-F4-6704-01,colon adenocarcinoma,MSS,III,60.0,MALE,Sigmoid Colon
+TCGA-F4-6805-01,colon adenocarcinoma,MSS,II,58.0,FEMALE,Descending Colon
+TCGA-F4-6806-01,colon adenocarcinoma,MSS,I,59.0,FEMALE,Sigmoid Colon
+TCGA-F4-6807-01,colon adenocarcinoma,MSS,III,51.0,FEMALE,Hepatic Flexure
+TCGA-F4-6808-01,colon adenocarcinoma,MSS,I,54.0,FEMALE,Sigmoid Colon
+TCGA-F4-6809-01,colon adenocarcinoma,MSS,IV,52.0,FEMALE,Sigmoid Colon
+TCGA-F4-6854-01,colon adenocarcinoma,MSS,II,77.0,FEMALE,Sigmoid Colon
+TCGA-F4-6855-01,colon adenocarcinoma,MSI-L,II,70.0,FEMALE,Sigmoid Colon
+TCGA-F4-6856-01,colon adenocarcinoma,MSI-H,I,45.0,MALE,Cecum
+TCGA-F5-6464-01,rectum adenocarcinoma,MSS,III,77.0,FEMALE,Rectum
+TCGA-F5-6465-01,rectum adenocarcinoma,MSS,II,64.0,FEMALE,Rectosigmoid Junction
+TCGA-F5-6571-01,rectum adenocarcinoma,MSI-L,II,62.0,FEMALE,Rectum
+TCGA-F5-6702-01,rectum adenocarcinoma,MSS,IV,71.0,MALE,Rectosigmoid Junction
+TCGA-F5-6811-01,rectum adenocarcinoma,MSI-L,II,72.0,FEMALE,Rectosigmoid Junction
+TCGA-F5-6812-01,rectum adenocarcinoma,MSS,II,67.0,MALE,Rectum
+TCGA-F5-6813-01,rectum adenocarcinoma,MSS,III,70.0,MALE,Rectum
+TCGA-F5-6814-01,rectum adenocarcinoma,MSS,II,57.0,MALE,Rectum
+TCGA-F5-6861-01,rectum adenocarcinoma,MSS,II,60.0,FEMALE,Rectum
+TCGA-F5-6863-01,rectum adenocarcinoma,MSI-L,III,71.0,FEMALE,Rectum
+TCGA-F5-6864-01,rectum adenocarcinoma,MSI-L,III,74.0,FEMALE,Rectum
+TCGA-G4-6293-01,colon adenocarcinoma,MSI-L,III,49.0,FEMALE,Transverse Colon
+TCGA-G4-6294-01,colon adenocarcinoma,MSS,IV,75.0,MALE,Cecum
+TCGA-G4-6295-01,colon adenocarcinoma,MSI-L,II,70.0,FEMALE,Cecum
+TCGA-G4-6297-01,colon adenocarcinoma,MSS,IV,55.0,FEMALE,Cecum
+TCGA-G4-6298-01,colon adenocarcinoma,MSI-L,III,90.0,MALE,Cecum
+TCGA-G4-6299-01,colon adenocarcinoma,MSS,III,69.0,MALE,Descending Colon
+TCGA-G4-6302-01,colon adenocarcinoma,MSI-H,II,90.0,FEMALE,Cecum
+TCGA-G4-6303-01,colon adenocarcinoma,MSI-L,IV,54.0,FEMALE,Sigmoid Colon
+TCGA-G4-6304-01,colon adenocarcinoma,MSI-H,II,66.0,FEMALE,Transverse Colon
+TCGA-G4-6307-01,colon adenocarcinoma,MSS,III,37.0,FEMALE,Sigmoid Colon
+TCGA-G4-6309-01,colon adenocarcinoma,MSI-H,III,40.0,FEMALE,Sigmoid Colon
+TCGA-G4-6310-01,colon adenocarcinoma,MSS,III,69.0,MALE,Cecum
+TCGA-G4-6311-01,colon adenocarcinoma,MSS,III,80.0,MALE,Ascending Colon
+TCGA-G4-6314-01,colon adenocarcinoma,MSS,IV,76.0,FEMALE,Cecum
+TCGA-G4-6315-01,colon adenocarcinoma,MSS,IV,66.0,MALE,Descending Colon
+TCGA-G4-6317-01,colon adenocarcinoma,MSI-L,III,51.0,FEMALE,Sigmoid Colon
+TCGA-G4-6320-01,colon adenocarcinoma,MSI-H,III,73.0,MALE,Hepatic Flexure
+TCGA-G4-6321-01,colon adenocarcinoma,MSI-L,III,60.0,FEMALE,Cecum
+TCGA-G4-6322-01,colon adenocarcinoma,MSI-L,III,65.0,MALE,Descending Colon
+TCGA-G4-6323-01,colon adenocarcinoma,MSS,I,50.0,MALE,Cecum
+TCGA-G4-6586-01,colon adenocarcinoma,MSI-H,II,73.0,FEMALE,Ascending Colon
+TCGA-G4-6588-01,colon adenocarcinoma,MSI-H,II,58.0,FEMALE,Cecum
+TCGA-G4-6625-01,colon adenocarcinoma,MSS,II,77.0,FEMALE,Sigmoid Colon
+TCGA-G4-6626-01,colon adenocarcinoma,MSS,II,90.0,MALE,Ascending Colon
+TCGA-G4-6627-01,colon adenocarcinoma,MSI-L,II,84.0,MALE,Ascending Colon
+TCGA-G4-6628-01,colon adenocarcinoma,MSI-H,I,78.0,MALE,Cecum
+TCGA-G5-6235-01,rectum adenocarcinoma,MSS,III,72.0,MALE,Rectosigmoid Junction
+TCGA-G5-6641-01,rectum adenocarcinoma,MSS,III,67.0,MALE,Rectosigmoid Junction
+TCGA-NH-A50T-01,colon adenocarcinoma,MSS,II,68.0,FEMALE,Splenic Flexure
+TCGA-NH-A50U-01,colon adenocarcinoma,MSS,IV,42.0,MALE,Cecum
+TCGA-NH-A50V-01,colon adenocarcinoma,MSI-L,III,69.0,MALE,Cecum
+TCGA-NH-A5IV-01,colon adenocarcinoma,MSI-H,II,90.0,FEMALE,Transverse Colon
+TCGA-NH-A6GA-01,colon adenocarcinoma,MSS,III,58.0,MALE,Ascending Colon
+TCGA-NH-A6GB-01,colon adenocarcinoma,MSS,III,71.0,FEMALE,Transverse Colon
+TCGA-NH-A6GC-01,colon adenocarcinoma,MSS,IV,66.0,FEMALE,Descending Colon
+TCGA-NH-A8F8-01,colon adenocarcinoma,MSS,IV,79.0,MALE,Ascending Colon
+TCGA-QG-A5YV-01,colon adenocarcinoma,MSS,III,64.0,FEMALE,Sigmoid Colon
+TCGA-QG-A5YW-01,colon adenocarcinoma,MSI-L,III,55.0,FEMALE,Cecum
+TCGA-QG-A5YX-01,colon adenocarcinoma,MSI-L,II,61.0,FEMALE,Sigmoid Colon
+TCGA-QG-A5Z1-01,colon adenocarcinoma,MSI-L,III,71.0,MALE,Sigmoid Colon
+TCGA-QG-A5Z2-01,colon adenocarcinoma,MSI-H,I,61.0,MALE,Cecum
+TCGA-QL-A97D-01,colon adenocarcinoma,MSS,I,84.0,FEMALE,Cecum
+TCGA-RU-A8FL-01,colon adenocarcinoma,MSS,III,51.0,MALE,Cecum
+TCGA-SS-A7HO-01,colon adenocarcinoma,MSS,II,44.0,FEMALE,Cecum
+TCGA-T9-A92H-01,colon adenocarcinoma,MSS,II,82.0,MALE,Sigmoid Colon
+TCGA-WS-AB45-01,colon adenocarcinoma,MSI-H,II,52.0,FEMALE,Cecum

@@ -1,0 +1,9 @@
+Variable,Test,p_value
+MSI_status,Chi-square,1.1094666686823044e-26
+sex,Chi-square,0.34806980403385646
+localization,Chi-square,1.8566681984532762e-05
+stage,Chi-square,0.0011707845466683614
+Age,Kruskal-Wallis,0.13213537173801987
+EGFR,Kruskal-Wallis,0.002800020566467245
+ERBB2,Kruskal-Wallis,0.10047284806759538
+MYC,Kruskal-Wallis,3.675544791503079e-06

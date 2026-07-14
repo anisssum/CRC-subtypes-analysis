@@ -1,0 +1,4 @@
+Log-rank p-value = 0.00533243
+
+   test_statistic         p  -log2(p)
+0       12.699987  0.005332   7.55099
