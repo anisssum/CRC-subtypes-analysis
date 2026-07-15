@@ -18,6 +18,7 @@ data = cms.merge(
 
 data = data.dropna()
 
+print(data.shape)
 # ===================== KAPLAN-MEIER =====================
 
 kmf = KaplanMeierFitter()

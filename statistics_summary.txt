@@ -1,23 +1,23 @@
 disease
-colon adenocarcinoma     265
+colon adenocarcinoma     264
 rectum adenocarcinoma     83
 
 sex
-MALE      192
+MALE      191
 FEMALE    156
 
-count    348.000000
-mean      64.459770
-std       13.112288
+count    347.000000
+mean      64.538905
+std       13.047736
 min       31.000000
-25%       55.000000
+25%       55.500000
 50%       66.000000
 75%       75.000000
 max       90.000000
 
 localization
 Sigmoid Colon            79
-Cecum                    70
+Cecum                    69
 Ascending Colon          50
 Rectosigmoid Junction    40
 Rectum                   40
@@ -29,11 +29,11 @@ Splenic Flexure           5
 
 MSI_status
 MSS      239
-MSI-L     57
+MSI-L     56
 MSI-H     52
 
 stage
 I       53
 II     131
 III    112
-IV      52
+IV      51

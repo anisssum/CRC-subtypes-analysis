@@ -1,13 +1,36 @@
 import os
+import re
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.stats import kruskal
+from scipy.stats import chi2_contingency
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
 import umap.umap_ as umap
 
 os.makedirs("figures", exist_ok=True)
+
+def get_top_variable_genes(expr_df, n_top=5000):
+    gene_var = expr_df.var(axis=1)
+    top_genes = gene_var.nlargest(n_top).index
+    expr_top = expr_df.loc[top_genes]
+    X = expr_top.T
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+    return X_scaled, X.index
+
+SAMPLE_TYPE_CODES = {
+    "01": "Primary Tumor",
+    "02": "Recurrent Tumor",
+    "03": "Primary Blood Cancer",
+    "05": "Additional New Primary",
+    "06": "Metastatic",
+    "07": "Additional Metastatic",
+    "10": "Blood Derived Normal",
+    "11": "Solid Tissue Normal"
+}
 
 # ========================== Load expression data ==========================
 expr = pd.read_csv("TCGA.COADREAD.sampleMap_HiSeqV2", sep="\t", index_col=0)
@@ -48,6 +71,8 @@ plt.savefig("figures/Expr_statistics.png", dpi=300)
 plt.close()
 
 # ========================== Sample statistics ==========================
+sample_mean = expr.mean(axis=0)
+
 fig, axes = plt.subplots(1, 2, figsize=(16, 6))
 
 axes[0].boxplot([expr.iloc[:, i] for i in range(200)],
@@ -57,9 +82,9 @@ axes[0].set_xlabel('Samples')
 axes[0].set_ylabel('log2(expression)')
 axes[0].set_xticks([])
 
-axes[1].hist(expr.mean(axis=0), bins=30, edgecolor='black', alpha=0.7)
-axes[1].axvline(expr.mean(axis=0).mean(), color='red', linestyle='--',
-                label=f"Mean = {expr.mean(axis=0).mean():.2f}")
+axes[1].hist(sample_mean, bins=30, edgecolor='black', alpha=0.7)
+axes[1].axvline(sample_mean.mean(), color='red', linestyle='--',
+                label=f"Mean = {sample_mean.mean():.2f}")
 axes[1].set_xlabel('Sample mean expression')
 axes[1].set_ylabel('Number of samples')
 axes[1].set_title('Distribution of sample means')
@@ -69,17 +94,42 @@ plt.tight_layout()
 plt.savefig("figures/Sample_statistics.png", dpi=300)
 plt.close()
 
-# ========================== Filter top variable genes ==========================
-gene_var = expr.var(axis=1)
-top_genes = gene_var.nlargest(5000).index
-expr_filtered = expr.loc[top_genes]
+# ==================== Formal outlier criterion (sample level) ====================
 
-# ========================== Standardization ==========================
-X = expr_filtered.T
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+q1, q3 = sample_mean.quantile([0.25, 0.75])
+iqr = q3 - q1
+iqr_low, iqr_high = q1 - 1.5 * iqr, q3 + 1.5 * iqr
 
-# ========================== PCA ==========================
+z_scores = (sample_mean - sample_mean.mean()) / sample_mean.std()
+
+iqr_outliers = sample_mean[(sample_mean < iqr_low) | (sample_mean > iqr_high)]
+z_outliers = sample_mean[z_scores.abs() > 3]
+
+consensus_outliers = sorted(set(iqr_outliers.index) & set(z_outliers.index))
+
+print(f"IQR-rule outlier candidates ({len(iqr_outliers)}): {list(iqr_outliers.index)}")
+print(f"Z-score (>3 SD) outlier candidates ({len(z_outliers)}): {list(z_outliers.index)}")
+
+expr = expr.drop(columns=consensus_outliers)
+print(f"Removed {len(consensus_outliers)} sample(s) failing both outlier "
+        f"criteria. Expression shape after removal: {expr.shape}")
+# ========================== Technical batch check ==========================
+
+def parse_tcga_barcode(sample_id):
+    parts = str(sample_id).split("-")
+    tss_code = parts[1]
+    type_code = re.sub(r"[^0-9]", "", parts[3])[:2]
+    sample_type = SAMPLE_TYPE_CODES.get(type_code, f"Other ({type_code})")
+    return tss_code, sample_type
+
+barcode_info = pd.DataFrame(
+    [parse_tcga_barcode(s) for s in expr.columns],
+    columns=["TSS", "sample_type"],
+    index=expr.columns
+)
+
+# ========================== Filter top variable genes + PCA/tSNE/UMAP ==========================
+X_scaled, sample_order = get_top_variable_genes(expr, n_top=5000)
 pca = PCA(n_components=2, random_state=42)
 X_pca = pca.fit_transform(X_scaled)
 
@@ -102,21 +152,18 @@ X_umap = reducer.fit_transform(X_scaled)
 
 fig, axes = plt.subplots(1, 3, figsize=(16, 6))
 
-# 1. PCA
 axes[0].scatter(X_pca[:, 0], X_pca[:, 1], s=20, alpha=0.7)
 axes[0].set_xlabel(f"PC1 ({pca.explained_variance_ratio_[0]*100:.1f}%)")
 axes[0].set_ylabel(f"PC2 ({pca.explained_variance_ratio_[1]*100:.1f}%)")
 axes[0].set_title("PCA")
 axes[0].grid(True, alpha=0.3)
 
-# 2. t-SNE
 axes[1].scatter(X_tsne[:, 0], X_tsne[:, 1], s=20, alpha=0.7)
 axes[1].set_xlabel("t-SNE1")
 axes[1].set_ylabel("t-SNE2")
 axes[1].set_title("t-SNE")
 axes[1].grid(True, alpha=0.3)
 
-# 3. UMAP
 axes[2].scatter(X_umap[:, 0], X_umap[:, 1], s=20, alpha=0.7)
 axes[2].set_xlabel("UMAP1")
 axes[2].set_ylabel("UMAP2")
@@ -127,6 +174,71 @@ plt.tight_layout()
 plt.savefig("figures/Dimensionality_Reduction_Comparison.png", dpi=300)
 plt.close()
 
+# ==================== PCA/UMAP colored by TSS and by parsed sample type ====================
+barcode_plot = barcode_info.loc[sample_order].reset_index(drop=True)
+
+fig, axes = plt.subplots(1, 2, figsize=(16, 7))
+
+tss_categories = barcode_plot["TSS"].unique()
+cmap_tss = plt.get_cmap("tab20", len(tss_categories))
+for i, tss in enumerate(tss_categories):
+    mask = barcode_plot["TSS"] == tss
+    axes[0].scatter(X_umap[mask.values, 0], X_umap[mask.values, 1],
+                     s=15, alpha=0.7, color=cmap_tss(i))
+axes[0].set_xlabel("UMAP1")
+axes[0].set_ylabel("UMAP2")
+axes[0].set_title(f"UMAP colored by TSS, {len(tss_categories)} sites")
+axes[0].grid(True, alpha=0.3)
+
+type_categories = barcode_plot["sample_type"].unique()
+cmap_type = plt.get_cmap("tab10", len(type_categories))
+for i, st in enumerate(type_categories):
+    mask = barcode_plot["sample_type"] == st
+    axes[1].scatter(X_umap[mask.values, 0], X_umap[mask.values, 1],
+                     s=15, alpha=0.7, color=cmap_type(i), label=st)
+axes[1].set_xlabel("UMAP1")
+axes[1].set_ylabel("UMAP2")
+axes[1].set_title("UMAP colored by sample type")
+axes[1].legend(bbox_to_anchor=(1.02, 1), loc="upper left")
+axes[1].grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.savefig("figures/UMAP_batch_and_sample_type.png", dpi=300, bbox_inches="tight")
+plt.close()
+
+umap_values = X_umap[:, 0]
+umap_negative_mask = umap_values < 0
+umap_positive_mask = umap_values >= 0
+
+n_negative = umap_negative_mask.sum()
+n_positive = umap_positive_mask.sum()
+
+print(f"PC1 split: {n_negative} samples with < 0, {n_positive} samples with >= 0")
+
+tss_negative = barcode_plot.loc[umap_negative_mask, "TSS"].value_counts()
+tss_positive = barcode_plot.loc[umap_positive_mask, "TSS"].value_counts()
+
+all_tss = sorted(set(tss_negative.index) | set(tss_positive.index))
+contingency_table = []
+for tss in all_tss:
+    neg_count = tss_negative.get(tss, 0)
+    pos_count = tss_positive.get(tss, 0)
+    contingency_table.append([neg_count, pos_count])
+
+contingency_table = np.array(contingency_table)
+
+chi2, p, dof, expected = chi2_contingency(contingency_table)
+print(f"\nChi-square test of independence between PC1 sign and TSS: "
+        f"chi2={chi2:.2f}, df={dof}, p={p:.3e}")
+
+# ========================== Keep only Primary Tumor ==========================
+
+primary_tumor_mask = barcode_info["sample_type"] == "Primary Tumor"
+print(f"Samples by parsed type before filtering:\n{barcode_info['sample_type'].value_counts()}")
+
+expr = expr.loc[:, primary_tumor_mask]
+print(f"Expression data after keeping only Primary Tumor: {expr.shape}")
+
 # ========================== Load clinical data ==========================
 clinical_df = pd.read_csv("TCGA.COADREAD.sampleMap%2FCOADREAD_clinicalMatrix", sep="\t")
 print(f"Initial clinical data shape: {clinical_df.shape}")
@@ -136,52 +248,6 @@ sample_ids = expr.columns.tolist()
 clinical_df = clinical_df[
     clinical_df["sampleID"].isin(sample_ids)
 ].copy()
-
-# ========================== UMAP colored by sample_type ==========================
-sample_order = X.index.tolist()
-
-plot_df = pd.DataFrame({
-    "UMAP1": X_umap[:, 0],
-    "UMAP2": X_umap[:, 1],
-    "sampleID": sample_order
-})
-
-plot_df = plot_df.merge(clinical_df[['sampleID', 'sample_type']], on='sampleID', how='left')
-
-plt.figure(figsize=(10, 8))
-
-plot_df['sample_type'] = plot_df['sample_type'].fillna("Unknown").astype(str)
-
-categories = plot_df['sample_type'].unique()
-cmap = plt.get_cmap("tab10", len(categories))
-
-for i, cat in enumerate(categories):
-    mask = plot_df['sample_type'] == cat
-    plt.scatter(
-        plot_df.loc[mask, "UMAP1"],
-        plot_df.loc[mask, "UMAP2"],
-        color=cmap(i),
-        label=cat
-    )
-
-plt.xlabel("UMAP1")
-plt.ylabel("UMAP2")
-
-plt.legend(
-    title="Sample Type",
-    bbox_to_anchor=(1.02, 1),
-    loc="upper left"
-)
-
-plt.tight_layout()
-plt.savefig("figures/UMAP_by_sample_type.png", dpi=300, bbox_inches="tight")
-plt.close()
-
-# ========================== Leave only Primary Tumor ==========================
-clinical_df = clinical_df[clinical_df["sample_type"] == "Primary Tumor"].copy()
-
-expr = expr[clinical_df["sampleID"].tolist()]
-print(f"Expression data after removing normal tissue: {expr.shape}")
 
 # ========================== Select relevant clinical columns ==========================
 clinical_df = clinical_df[
@@ -274,45 +340,39 @@ report.append("")
 with open("statistics_summary.txt", "w") as f:
     f.write("\n".join(report))
 
-# ==================== Единый график со всеми подграфиками ====================
+# ==================== Overall clinical plots ====================
 
 fig, axes = plt.subplots(2, 3, figsize=(15, 10))
 
-# Diagnosis
 clinical_df["disease"].value_counts().plot(kind="bar", ax=axes[0, 0])
 axes[0, 0].set_ylabel("Number of samples")
 axes[0, 0].set_title("Diagnosis")
 axes[0, 0].set_xticklabels(axes[0, 0].get_xticklabels(), rotation=0, ha="right")
 axes[0, 0].set_xlabel("")
 
-# Sex
 clinical_df["sex"].value_counts().plot(kind="bar", ax=axes[0, 1])
 axes[0, 1].set_ylabel("Number of patients")
 axes[0, 1].set_title("Sex")
 axes[0, 1].set_xticklabels(axes[0, 1].get_xticklabels(), rotation=0)
 axes[0, 1].set_xlabel("") 
 
-# Age
 axes[0, 2].hist(clinical_df["age"], bins=20, edgecolor="black")
 axes[0, 2].set_xlabel("")
 axes[0, 2].set_ylabel("Number of patients")
 axes[0, 2].set_title("Age distribution")
 
-# Localization
 clinical_df["localization"].value_counts().plot(kind="bar", ax=axes[1, 0])
 axes[1, 0].set_ylabel("Number of patients")
 axes[1, 0].set_title("Tumor localization")
 axes[1, 0].set_xticklabels(axes[1, 0].get_xticklabels(), rotation=45, ha="right")
 axes[1, 0].set_xlabel("")
 
-# MSI status
 clinical_df["MSI_status"].value_counts().plot(kind="bar", ax=axes[1, 1])
 axes[1, 1].set_ylabel("Number of patients")
 axes[1, 1].set_title("MSI status")
 axes[1, 1].set_xticklabels(axes[1, 1].get_xticklabels(), rotation=45, ha="right")
 axes[1, 1].set_xlabel("")
 
-# 6. Stage
 clinical_df["stage"].value_counts().sort_index().plot(kind="bar", ax=axes[1, 2])
 axes[1, 2].set_ylabel("Number of patients")
 axes[1, 2].set_title("Tumor stage")
@@ -324,18 +384,17 @@ plt.savefig("figures/All_Statistics_Combined.png", dpi=300)
 plt.close()
 
 # ========================== PCA colored by localization ==========================
-X = expr.T
-
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+X_scaled_loc, sample_order_loc = get_top_variable_genes(expr, n_top=5000)
 
 pca = PCA(n_components=2, random_state=42)
-X_pca = pca.fit_transform(X_scaled)
+X_pca_loc = pca.fit_transform(X_scaled_loc)
+
+localization_by_sample = clinical_df.set_index("sampleID").loc[sample_order_loc, "localization"]
 
 plot_df = pd.DataFrame({
-    "PC1": X_pca[:, 0],
-    "PC2": X_pca[:, 1],
-    "localization": clinical_df["localization"]
+    "PC1": X_pca_loc[:, 0],
+    "PC2": X_pca_loc[:, 1],
+    "localization": localization_by_sample.values
 })
 
 plt.figure(figsize=(8, 6))
@@ -351,6 +410,7 @@ for loc in plot_df["localization"].unique():
 
 plt.xlabel(f"PC1 ({pca.explained_variance_ratio_[0]*100:.1f}%)")
 plt.ylabel(f"PC2 ({pca.explained_variance_ratio_[1]*100:.1f}%)")
+plt.title("PCA (top-5000 HVG, scaled) colored by tumor localization")
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.tight_layout()
 
