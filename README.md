@@ -62,19 +62,17 @@ Survival analysis
 
 ### Python
 
-- pandas
-- numpy
-- scipy
-- scikit-learn
-- matplotlib
-- umap-learn
+- pandas: 2.3.3
+- numpy: 2.4.6
+- scipy: 1.18.0
+- sklearn: 1.9.0
+- matplotlib: 3.11.0
+- umap: 0.5.12 
 
 ### R
 
-- CMScaller
-- survival
-- survminer
-- tidyverse
+- CMScaller: 0.99.2
+- tidyverse: 2.0.0
 
 ## Running the Analysis
 
