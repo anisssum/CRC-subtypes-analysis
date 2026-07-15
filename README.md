@@ -104,7 +104,7 @@ This step performs:
 
 Run the R script:
 
-```r
+```bash
 Rscript ./scripts/CMS_classification.R
 ```
 
